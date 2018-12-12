@@ -1,0 +1,26 @@
+<!--pages/list/list.wxml-->
+<import src="/pages/template/list-template.wxml"/>
+<view>
+  <swiper indicator-dots indicator-color="#fff" indicator-active-color="#31c27c"
+  catchtap="swiperTodetail"
+  >
+    <swiper-item>
+      <image data-index="0"
+      src='//y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1095252.jpg?max_age=2592000'></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-index="1" src='//y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1095022.jpg?max_age=2592000'></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-index="2" src='https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1093972.jpg?max_age=2592000'></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-index="3" src='//y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1093790.jpg?max_age=2592000'></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{listArr}}" wx:key="{{index}}">
+  <view catchtap="toDetail" data-index="{{index}}">
+    <template is="listTmp" data="{{...item}}" />
+  </view>
+  </block>
+</view>

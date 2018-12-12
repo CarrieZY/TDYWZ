@@ -1,0 +1,17 @@
+<template name="listTmp">
+<view class='tmp-contain'>
+  <view class='avatar'>
+    <image src="{{avatar}}"></image>
+    <text>{{date}}</text>
+  </view>
+  <text class='title'>{{title}}</text>
+  <image class='content-img' src="{{detail_img}}"></image>
+  <text class='content'>{{detail_content}}</text>
+  <view class="collection">
+    <image src="{{detail_love_image1}}"></image>
+    <text>{{love_count}}</text>
+    <image src='{{detail_love_image2}}'></image>
+    <text>{{attention_count}}</text>
+  </view>
+</view>
+</template>
